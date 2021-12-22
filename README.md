@@ -156,7 +156,8 @@ On load the index page triggers the <code>getData</code> function that makes the
         </div></>}
     <h2 className="title has-text-centered">
       {hasError ? 'Oh something went wrong, There are no beers to display 😞' : ' Beers are Loading...'}
-      ```
+      
+```      
  
  
 
