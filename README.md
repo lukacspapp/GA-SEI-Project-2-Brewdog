@@ -91,6 +91,17 @@ On load the index page triggers the <code>getData</code> function that makes the
   ```
   As the funtion is in a <code>useEffect</code> the <code>getData</code> function gets called whenver there is change in the array of beers.
   
+  The is a filter on this page which it executed by the <code>newBeers</code> function on a click event.
+  
+  ```
+  const handleClick = (event) => {
+    const newBeers = beers.filter((beer) => {
+      return beer.abv >= parseFloat(event.target.value) && beer.abv <= (parseFloat(event.target.value) + 2)
+    })
+    setFilteredBeers(newBeers)
+  }
+  ```
+  
   There is also Error handling which is executed with a ternary operator.
   
   ```
