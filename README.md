@@ -89,7 +89,7 @@ On load the index page triggers the <code>getData</code> function that makes the
   }, [])
   
   ```
-  As the funtion is in a <code>useEffect</code> the <codegetData</code> function gets called whenver there is change in the array of beers.
+  As the funtion is in a <code>useEffect</code> the <code>getData</code> function gets called whenver there is change in the array of beers.
   
   There is also Error handling which is executed with a ternary operator.
   
