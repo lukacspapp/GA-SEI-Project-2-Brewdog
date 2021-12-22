@@ -63,13 +63,13 @@ We displayed 9 different types of data from the nested API that we displayed on 
 
 ## Development
 
-We decided to have a simple three-page application: <span>Index Page<span>(/beers), View of a Single Page (beers/id) and a Random Beer Page (beers/random)
+We decided to have a simple three-page application: <span>Index Page<span/>(/beers), View of a Single Page (beers/id) and a Random Beer Page (beers/random)
 
 ### Index Page:
   
   <img src='https://i.imgur.com/vbF9gLB.png'>
 
-On load the index page triggers the <code>getData<code> function that makes the request to API with axoisand returns the image, name , tagline and the first brewed time of the 25 beers. The page also has a filter that lets the user filter through the beers according to their ABV content. The filter is on the right handside of the navbar that is conditionally rendered. It is only visible when the user is on the Index page.
+On load the index page triggers the <code>getData</code> function that makes the request to API with axoisand returns the image, name , tagline and the first brewed time of the 25 beers. The page also has a filter that lets the user filter through the beers according to their ABV content. The filter is on the right handside of the navbar that is conditionally rendered. It is only visible when the user is on the Index page.
 
 
 ### View of a Single Page:
