@@ -93,6 +93,8 @@ On load the index page triggers the <code>getData</code> function that makes the
   
   The is a filter on this page which it executed by the <code>newBeers</code> function on a click event.
   
+  <img src='https://i.imgur.com/QMiCsgm.png'>
+  
   ```
   const handleClick = (event) => {
     const newBeers = beers.filter((beer) => {
