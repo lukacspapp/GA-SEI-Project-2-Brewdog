@@ -88,8 +88,77 @@ On load the index page triggers the <code>getData</code> function that makes the
     getData()
   }, [])
   
-  ````
+  ```
+  As the funtion is in a <code>useEffect</code> the <getData</> function gets called whenver there is change in the array of beers.
   
+  There is also Error handling which is executed by the a ternary operator.
+  
+  ```
+  {filteredBeers.length > 0 ?
+      <div className='container' id='container'>
+        <div className='tile is-ancestor is-flex-wrap-wrap is-flex-direction-row'>
+          {filteredBeers.map(beer => {
+            return (
+              <div key={beer.id} className="tile is-3 is-parent">
+                <Link className="tile is-child" id='background' to={`/beers/${beer.id}`}>
+                  <div className="card-image">
+                    <figure className="image is-3by5">
+                      <img id='image' src={beer.image_url} alt={beer.name} />
+                    </figure>
+                  </div>
+                  <div className="card-content">
+                    <div className="media-content">
+                      <p className="title text">{beer.name}</p>
+                      <br />
+                      <p className="subtitle is-6 text">{beer.tagline}</p>
+                    </div>
+                    <div className="content subtitle is-6 text">
+                      <br /><br />
+                      <p>First brewed:<br /> <br />{beer.first_brewed}</p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            )
+          })
+          }
+        </div>
+      </div >
+      :
+      <>
+        <div className='container' id='container'>
+          <div className='tile is-ancestor is-flex-wrap-wrap is-flex-direction-row'>
+            {beers.map(beer => {
+              return (
+                <div key={beer.id} className="tile is-3 is-parent">
+                  <Link className="tile is-child" id='background' to={`/beers/${beer.id}`}>
+                    <div className="card-image">
+                      <figure className="image is-3by5">
+                        <img id='image' src={beer.image_url} alt={beer.name} />
+                      </figure>
+                    </div>
+                    <div className="card-content">
+                      <div className="media-content">
+                        <p className="title text">{beer.name}</p>
+                        <br />
+                        <p className="subtitle is-6 text">{beer.tagline}</p>
+                      </div>
+                      <div className="content subtitle is-6 text">
+                        <br /><br />
+                        <p>First brewed:<br /> <br />{beer.first_brewed}</p>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              )
+            })}
+          </div>
+        </div></>}
+    <h2 className="title has-text-centered">
+      {hasError ? 'Oh something went wrong, There are no beers to display 😞' : ' Beers are Loading...'}
+      ```
+ 
+ 
 
 
 ### View of a Single Page:
