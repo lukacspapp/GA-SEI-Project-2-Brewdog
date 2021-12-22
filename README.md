@@ -91,7 +91,7 @@ On load the index page triggers the <code>getData</code> function that makes the
   ```
   As the funtion is in a <code>useEffect</code> the <getData</> function gets called whenver there is change in the array of beers.
   
-  There is also Error handling which is executed by the a ternary operator.
+  There is also Error handling which is executed with a ternary operator.
   
   ```
   {filteredBeers.length > 0 ?
