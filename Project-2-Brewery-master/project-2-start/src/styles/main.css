@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Creepster&family=Gluten&family=Irish+Grover&family=Lobster&family=Permanent+Marker&family=Press+Start+2P&family=Rampart+One&family=Zen+Kurenaido&display=swap');
+
+.image2 {
+  background-image:url('./giphy background .gif') ;
+  background-position: cover;
+  background-position: center;
+  background-size: 500px;
+  height: 500px;
+  width: 700px;
+  background-repeat: no-repeat;
+
+}
+
+.hero-body {
+  align-self: center;
+  background-color: black;
+}
+.hero.is-fullheight-with-navbar {
+  background-color: black;
+}
+#image {
+  padding: 80px;
+}
+#container {
+  margin-top: 30px;
+}
+.tile {
+  border-radius: 20px;
+}
+.text {
+  color: antiquewhite;
+ 
+}
+#background {
+  background-image: url('./background.gif');
+  background-size: cover;
+  background-position: center;
+  
+}
+p {
+  text-align: center;
+}
+#root {
+  /* font-family: 'Bubblegum Sans', cursive; */
+  /* font-family: 'Creepster', cursive; */
+  /* font-family: 'Irish Grover', cursive; */
+  /* font-family: 'Permanent Marker', cursive; */
+  font-family: 'Press Start 2P', cursive;
+  /* font-family: 'Rampart One', cursive; */
+}
+.column {
+  text-align: center;
+}
+
+.button {
+  font-family: 'Press Start 2P', cursive;
+  margin-top: 10px;
+}
