@@ -41,7 +41,7 @@ https://search-and-play.netlify.app/
 https://github.com/lukacspapp/Project-2-Brewdog-Api
 
 - Clone or download the repo
-- Navigate to project-2-start
+- Navigate to project-2-start folder
 - Install yarn in Terminal by typing: <code>yarn</code>
 - Start server with <code>yarn start</code>
 
