@@ -175,7 +175,7 @@ On load the index page triggers the <code>getData</code> function that makes the
  
 
 
-### View of a Single Page:
+### View of a Single Beer Page:
 
 The view of a single beer page returns the image, name, description, ABV percentage, brewery tips, food pairing recommendations and the ingridients of the selected beer
 
