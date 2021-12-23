@@ -260,7 +260,7 @@ There is also some extra error handling in case the any of the api takes a bit m
 
 ### Styling
 
-For styling we used [Bulma]('https://bulma.io/')
+For styling we used [Bulma](https://bulma.io/)
 
 ## Wins
 
