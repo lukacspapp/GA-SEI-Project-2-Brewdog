@@ -88,7 +88,7 @@ const BeerInfo = () => {
           </div>
             :
             <h2 className="title has-text-centered">
-              {hasError ? 'Oh something went wrong, There are no beers to display 😞' : ' Beers are Loading...'}
+              {hasError ? 'Oh something went wrong, There are no beers to display 😞' : ''}
             </h2>
           }
 
