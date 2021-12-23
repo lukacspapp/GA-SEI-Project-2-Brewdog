@@ -185,7 +185,10 @@ There is a randomly generated beer option is available from the home page as wel
 
 ```
   <div className='column is-half'>{url !== null ? <img src={beers.image_url}></img> : <img src={error}></img> }</div>
-```  
+```
+
+
+
 
 
 ### View of a Single Page:
