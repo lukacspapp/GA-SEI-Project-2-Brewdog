@@ -260,7 +260,7 @@ There is also some extra error handling in case the any of the api takes a bit m
 
 ### Styling
 
-For styling we used <img src='https://bulma.io/images/bulma-logo.png' width="112" height="28">
+For styling we used [Bulma]('https://bulma.io/')
 
 ## Wins
 
