@@ -264,15 +264,17 @@ For styling we used a CSS framework [Bulma](https://bulma.io/). We used mainly t
 
 ## Wins
 
-Filter  :raised_hands: Filter was a real challange that took us a great deal of time, loads of reaserch and team effort. We were very pleased that we were able to execute it in such a short period of time.
+Filter  :raised_hands::    Filter was a real challange that took us a great deal of time, loads of reaserch and team effort. We were very pleased that we were able to execute it in such a short period of time.
 
-Teamwork :raised_hands: This was the first time in my life I have ever pair-coded and it was a great experience. Me and Piotr worked out great together. When I was coding he was reaserching, throwing ideas and vice versa. It was really easy to work with him and we made a great team. We were able to figure out difficult tasks togeter such as the filteration of the beers.
+Teamwork :raised_hands::   This was the first time in my life I have ever pair-coded and it was a great experience. Me and Piotr worked out great together. When I was coding he was reaserching, throwing ideas and vice versa. It was really easy to work with him and we made a great team. We were able to figure out difficult tasks togeter such as the filteration of the beers.
 
 
 ## Challenges
 
-Filter :no_entry_sign: I think it was the biggest challange for both of us.
-Styling :no_entry_sign: I Really love [Bulma](https://bulma.io/) but it was a real challange to get use to the hundreds of divs I needed to use in order to execute a component
+Filter :no_entry_sign::    I think it was the biggest challange for both of us.
+
+
+Styling :no_entry_sign::   I Really love [Bulma](https://bulma.io/) but it was a real challange to get use to the hundreds of divs I needed to use in order to execute a component
 
 
 ## Key Learnings
