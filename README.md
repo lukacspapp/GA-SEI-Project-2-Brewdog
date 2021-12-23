@@ -34,11 +34,9 @@ A web application where users can browse and find out various information about 
 
 ### Deployed version
 
-https://search-and-play.netlify.app/
+https://github.com/lukacspapp/Project-2-Brewdog-Api
 
 ## Code Installation
-
-https://github.com/lukacspapp/Project-2-Brewdog-Api
 
 - Clone or download the repo
 - Navigate to project-2-start folder
