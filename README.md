@@ -71,7 +71,7 @@ We decided to have a simple three-page application: Welcome Page(/), Index Page(
   The Welcome page is a really simple one as it can be seen here <img src='https://i.imgur.com/vGySNjK.png'>
   It has two buttons, the 'Discover Brewdog!' that will take you to the index page(/beers), and the 'Generate a random Brewdog! 
   that will take you to the view of a single beer page (beers/random).
-  It also has a navbar that has two buttons one is our logo that we got from [<img src='https://i.imgur.com/QtdehMW.png'>](https://giphy.com/gifs/kochstrasse-hannover-agencylife-agenturleben-OZeWzZalgU5XNyHAqh)
+  It also has a navbar that has two buttons one is our logo that we got from [Giphy](https://giphy.com/gifs/kochstrasse-hannover-agencylife-agenturleben-OZeWzZalgU5XNyHAqh)
 
 ### Index Page:
   
