@@ -28,7 +28,7 @@ Piotr Jankowski - [<img src="https://i.stack.imgur.com/gVE0j.png" width='20px' a
 # Brewdog API
 A web application where users can browse and find out various information about their favourite brewdog drink based on [Brewdog's Api](https://punkapi.com/documentation/v2)
 
-### Home Page
+### Welcome Page
 
 <img src='https://i.imgur.com/vGySNjK.png'>
 
@@ -63,7 +63,15 @@ We displayed 9 different types of data from the nested API that we displayed on 
 
 ## Development
 
-We decided to have a simple three-page application: <span>Index Page<span/>(/beers), View of a Single Page (beers/id) and a Random Beer Page (beers/random)
+We decided to have a simple three-page application: Welcome Page(/), Index Page(/beers) and a View of a Single Page (beers/id).
+
+
+### Welcome Page:
+
+  The Welcome page is a really simple one as it can be seen here <img src='https://i.imgur.com/vGySNjK.png'>
+  It has two buttons, the 'Discover Brewdog!' that will take you to the index page(/beers), and the 'Generate a random Brewdog! 
+  that will take you to the view of a single beer page (beers/random).
+  It also has a navbar that has two buttons one is our logo that we got from [<img src='https://i.imgur.com/QtdehMW.png'>](https://giphy.com/gifs/kochstrasse-hannover-agencylife-agenturleben-OZeWzZalgU5XNyHAqh)
 
 ### Index Page:
   
