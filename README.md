@@ -21,9 +21,7 @@ Piotr Jankowski - [<img src="https://i.stack.imgur.com/gVE0j.png" width='20px' a
 - React.js
 - JavaScript (ES6)
 - HTML 5
-- CSS
-- Bulma
-- Git/GitHub
+- Bulma/ CSS
 - Axios
 
 # Brewdog API
