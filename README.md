@@ -69,7 +69,7 @@ We decided to have a simple three-page application: <span>Index Page<span/>(/bee
   
   <img src='https://i.imgur.com/vbF9gLB.png'>
   
-  The index page which is in the BeerDisply component returns the image, name , tagline and the first brewed time of the 25 beers. The page also has a filter that lets the user filter through the beers according to their ABV content. The filter is on the right handside of the navbar that is conditionally rendered. It is only visible when the user is on the Index page.
+  The index page which is in the BeerDisply component and returns the image, name , tagline and the first brewed time of the 25 beers. The page also has a filter that lets the user filter through the beers according to their ABV content. The filter is on the right handside of the navbar that is conditionally rendered. It is only visible when the user is on the Index page.
 
 On load the index page triggers the <code>getData</code> function that makes the request to the API with axios and sets the data to a <code>useState</code>
   ```
@@ -177,7 +177,15 @@ On load the index page triggers the <code>getData</code> function that makes the
 
 ### View of a Single Beer Page:
 
-The view of a single beer page returns the image, name, description, ABV percentage, brewery tips, food pairing recommendations and the ingridients of the selected beer
+The view of a single beer page is in the BeerInfo component and returns the image, name, description, ABV percentage, brewery tips, food pairing recommendations and the ingridients of the selected beer.
+  
+There is a randomly generated beer option is available from the home page as well which is handled in this component. It is a great feature of this API that you can make a request to <code>https://api.punkapi.com/v2/beers/random</code> and it will give us a all the data from a randomly generated beer. We added some error handling as some of the beers does not have an image. We have set the image_url to a state and if that array return null an error image appear next to the beer information.
+  
+  <img src='https://media0.giphy.com/media/OZeWzZalgU5XNyHAqh/giphy.gif?cid=ecf05e479dcrrg6cpofgx2ylaxnii83syhpkiz1qscsso0t3&rid=giphy.gif&ct=g'>
+
+```
+  <div className='column is-half'>{url !== null ? <img src={beers.image_url}></img> : <img src={error}></img> }</div>
+```  
 
 
 ### View of a Single Page:
