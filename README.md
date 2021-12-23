@@ -69,7 +69,7 @@ We decided to have a simple three-page application: <span>Index Page<span/>(/bee
   
   <img src='https://i.imgur.com/vbF9gLB.png'>
   
-  The inde page returns the image, name , tagline and the first brewed time of the 25 beers. The page also has a filter that lets the user filter through the beers according to their ABV content. The filter is on the right handside of the navbar that is conditionally rendered. It is only visible when the user is on the Index page.
+  The index page which is in the BeerDisply component returns the image, name , tagline and the first brewed time of the 25 beers. The page also has a filter that lets the user filter through the beers according to their ABV content. The filter is on the right handside of the navbar that is conditionally rendered. It is only visible when the user is on the Index page.
 
 On load the index page triggers the <code>getData</code> function that makes the request to the API with axios and sets the data to a <code>useState</code>
   ```
@@ -89,7 +89,7 @@ On load the index page triggers the <code>getData</code> function that makes the
   }, [])
   
   ```
-  As the funtion is in a <code>useEffect</code> the <code>getData</code> function gets called whenver there is change in the array of beers.
+  As the function is in a <code>useEffect</code> the <code>getData</code> function gets called whenver there is change in the array of beers.
   
   The is a filter on this page which it executed by the <code>newBeers</code> function on a click event.
   
