@@ -69,7 +69,11 @@ We decided to have a simple three-page application: Welcome Page(/), Index Page(
   The Welcome page is a really simple one as it can be seen here <img src='https://i.imgur.com/vGySNjK.png'>
   It has two buttons, the 'Discover Brewdog!' that will take you to the index page(/beers), and the 'Generate a random Brewdog! 
   that will take you to the view of a single beer page (beers/random).
-  It also has a navbar that has two buttons one is our logo that we got from [Giphy](https://giphy.com/gifs/kochstrasse-hannover-agencylife-agenturleben-OZeWzZalgU5XNyHAqh)
+  It also has a navbar, that has two buttons one is our logo that we got from [Giphy](https://giphy.com/gifs/BrewDogOfficial-brewdog-punk-ipa-iE3lwBCEBdzA6HQJRo)
+  which displayed all the time on all pages and it always redirects the user back to the home page.
+  
+  The other button is the 🍺Brewdog API🍺  which is conditionally rendered that will take you to the beer index page(/beers). While you are on the index page(/beers) the button moves to the right hand side of the navbar and once you have selected an individual beer it will move back to the right hand side.
+
 
 ### Index Page:
   
@@ -254,126 +258,9 @@ There is also some extra error handling in case the any of the api takes a bit m
 
 
 
+### Styling
 
-
-### View of a Single Page:
-
-- Search by Word in Album Name: https://itunes.apple.com/search?term=butterfly&attribute=albumTerm&media=music&entity=song&limit=200
-
-### Prototypes with Miro
-
-We decided to have a simple two-page app: Home Page (/) & Tracks Page (/tracks). The Tracks page would show all the results as an index until a user clicked on one of them. On click, the album index will skew, make space for the track and play it.
-
-<img src="src/assets/home-page-miro.png" alt="home-page" width="300" /> <img src="src/assets/album-index-miro.png" alt="album-index" width="300" /> <img src="src/assets/artist-show-miro.png" alt="artist-show" width="300" />
-
-## Development
-
-### The Home Page
-
-<img src="src/assets/home-page-site.png" alt="home-page-site"/>
-
-The Home page along with the Search Bar make two common components of the app. On load, the homepage calls <code>componentDidMount</code> function using axios for the home page styling. The axios request <code>getAllSongs</code> is in the lib -> api.js file:
-
-    export const getAllSongs = (term, attribute) => {
-      if (attribute === 'Any') {
-        return axios.get(`https://cors-anywhere.herokuapp.com/https://itunes.apple.com/search?term=${term}&media=music&entity=song&limit=200`)
-      }
-      else {
-        return axios.get(`https://cors-anywhere.herokuapp.com/https://itunes.apple.com/search?term=${term}&attribute=${attribute}&media=music&entity=song&limit=200`)
-      }
-    }
-
-<em><code>cors-anywhere.herokuapp</code> was added after the deployed on Heroku so we are not blocked by CORS policy.</em>
-
-The search bar is a child component of the Home Page. It collects the search team and attribute(such as 'All', 'songTerm', 'artistTerm' & 'albumTerm'). Once we hit enter, we pass these as props by adding them to URL of the Music Index Page.
-
-    handleSubmit = (event) => {
-      let term = this.state.search.term
-      if (!term) {
-        this.setState({ validate: false })
-        return
-      }
-      let attribute = (this.state.search.attribute ? this.state.search.attribute : 'Any')
-      this.props.history.push(`/tracks/${term}&${attribute}`)
-    }
-
-### Music Index Page
-
-![Music Index](src/assets/album-index-gif.gif)
-
-On loading, the Music Index Component retrieves the 'term' and 'attribute' values from the URL and adds them to the <code>getAllSongs</code> GET request:
-
-    const urlDetails = this.props.location.pathname
-        const term = urlDetails.split('/')[2].split('&')[0].replace(' ', '+')
-        const attribute = urlDetails.split('/')[2].split('&')[1]
-
-
-There are two events on the displayed album covers:
-
-onMouseEnter: show the track and artist name in the NavBar
-onMouseClick: Skew the index and show the artist details and play the song.
-
-    handleClick = (event) => {
-      this.setState({ isSkewedIndex: true })
-      setTimeout(() => { this.setState({ singleArtist: event, isShowingArtist:  true, volume: 0.6 }) }, 500)
-    }
-
-We enable the page to show the track on the right side by using Boolean state values and conditional rendering.
-
-    <div
-    className={`container column
-    ${this.state.isSkewedIndex ? 'slidingAnimation' :'slidingBackAnimation'}
-    ${this.state.isShowingArtist ? 'not-hidden' : 'hidden'}`}>
-        <MusicShow
-        {...this.state.singleArtist}
-        onClick={this.handleBackClick}
-        volume={this.state.volume}/>
-    </div>
-
-### Artist Show Section:
-
-On click, the index skews to left half of the page:
-
-    .skew {
-      transform: rotateY(55deg) skew(-13deg) scale(0.95);
-      box-shadow: 4px 10px 36px -2px rgb(241, 240, 169);
-
-      @media (max-width: 800px) {
-        display: none;
-      }
-    }
-
-and the Artist show section comes in with Sliding Animation:
-
-    .slidingAnimation {
-      animation: slide 1s ease;
-      animation-fill-mode: forwards;
-      background-image: linear-gradient(
-        to right,
-        rgba(247, 247, 247, 0),
-        rgb(10, 10, 9)
-      );
-      right: -400px;
-    }
-
-    @keyframes slide {
-      100% {
-        right: 0px;
-      }
-    }
-
-In this page, we use the React Audio Player as it's slightly better than HTML5 Audio player. We set it to 'autoplay' so the song begins playing as the page animates into this section:
-
-    <ReactAudioPlayer autoPlay controls={true} src={props.previewUrl} volume={props.volume}/>
-
-### Finishing Touches & Styling
-
-In the last 4-5 hours, we focused on adding some finishing touches:
-
-* Adding back button on the Music Index Page
-* Styling the artist show section with flexbox
-* Adding flashes to the music index. This was done by re-rendering the page on a timer and assigning <code>className="flash"</code> to random albums.
-* Styling the Home Page
+For styling we used <img src='https://bulma.io/images/bulma-logo.png' width="112" height="28"
 
 ## Wins
 
