@@ -39,8 +39,8 @@ https://github.com/lukacspapp/Project-2-Brewdog-Api
 
 - Clone or download the repo
 - Navigate to project-2-start folder
-- Install yarn in Terminal by typing: <code>yarn</code>
-- Start server with <code>yarn start</code>
+- Install dependencies in Terminal by typing: <code>yarn</code> or <code>npm install</code> 
+- Start server with <code>yarn start</code> or <code>npm start</code>
 
 ## Planning
 
@@ -113,74 +113,8 @@ On load the index page triggers the <code>getData</code> function that makes the
   }
   ```
   
-  There is also Error handling which is executed with a ternary operator.
-  
-  ```
-  {filteredBeers.length > 0 ?
-      <div className='container' id='container'>
-        <div className='tile is-ancestor is-flex-wrap-wrap is-flex-direction-row'>
-          {filteredBeers.map(beer => {
-            return (
-              <div key={beer.id} className="tile is-3 is-parent">
-                <Link className="tile is-child" id='background' to={`/beers/${beer.id}`}>
-                  <div className="card-image">
-                    <figure className="image is-3by5">
-                      <img id='image' src={beer.image_url} alt={beer.name} />
-                    </figure>
-                  </div>
-                  <div className="card-content">
-                    <div className="media-content">
-                      <p className="title text">{beer.name}</p>
-                      <br />
-                      <p className="subtitle is-6 text">{beer.tagline}</p>
-                    </div>
-                    <div className="content subtitle is-6 text">
-                      <br /><br />
-                      <p>First brewed:<br /> <br />{beer.first_brewed}</p>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            )
-          })
-          }
-        </div>
-      </div >
-      :
-      <>
-        <div className='container' id='container'>
-          <div className='tile is-ancestor is-flex-wrap-wrap is-flex-direction-row'>
-            {beers.map(beer => {
-              return (
-                <div key={beer.id} className="tile is-3 is-parent">
-                  <Link className="tile is-child" id='background' to={`/beers/${beer.id}`}>
-                    <div className="card-image">
-                      <figure className="image is-3by5">
-                        <img id='image' src={beer.image_url} alt={beer.name} />
-                      </figure>
-                    </div>
-                    <div className="card-content">
-                      <div className="media-content">
-                        <p className="title text">{beer.name}</p>
-                        <br />
-                        <p className="subtitle is-6 text">{beer.tagline}</p>
-                      </div>
-                      <div className="content subtitle is-6 text">
-                        <br /><br />
-                        <p>First brewed:<br /> <br />{beer.first_brewed}</p>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              )
-            })}
-          </div>
-        </div></>}
-    <h2 className="title has-text-centered">
-      {hasError ? 'Oh something went wrong, There are no beers to display 😞' : ' Beers are Loading...'}
-      
-```      
- 
+  There is also Error handling which is executed with a ternary operator. 
+  For the full example ➡️ [Here](https://github.com/lukacspapp/SEI-Project-2-Brewdog/blob/main/Project-2-Brewery-master/project-2-start/src/componts/BeersDisplay.js)
  
 
 
