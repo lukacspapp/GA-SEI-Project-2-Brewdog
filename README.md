@@ -260,13 +260,14 @@ There is also some extra error handling in case the any of the api takes a bit m
 
 ### Styling
 
-For styling we used [Bulma](https://bulma.io/)
+For styling we used a CSS framework [Bulma](https://bulma.io/). We used mainly the Bulma's card components which I really like. I think it is easy to use and gives us a really nice, modern design.
 
 ## Wins
 
-Styling :sparkles: . Very pleased with how fun this app is, we learnt so much about animations, timers and using conditional rendering.
+Filter: Filter was a real challange that took us a great deal of time, loads of reaserch and team effort. We were very pleased that we were able to execute it in such a short period of time.
 
-Teamwork :raised_hands: . This was the first time I pair-coded for almost 2 days and it was a wonderful experience. Rob and I were always in sync and found that bouncing personal ideas off each other always resulted in something better.
+Teamwork :raised_hands: 
+
 
 ## Challenges
 
