@@ -133,63 +133,14 @@ There is a randomly generated beer option is available from the home page as wel
 There is also some extra error handling in case the any of the api takes a bit more time to load or do not return anything back to the user
 
 ```
-{beers ? <div>
-            <div className='title has-text-centered'> <h1>{beers.name}</h1></div><hr /><div className='columns'>
-              <div className='column is-half'>{url !== null ? <img src={beers.image_url}></img> : <img src={error}></img> }</div>
-              <div className='column is-half'>
-                <h1 className='title is-5'>Description:</h1>
-                <br />
-                <h1 className='subtitle is-6'>{beers.description}</h1>
-                <hr />
-                <br />
-                <h1 className='title is-5'>ABV:</h1>
-                <h1 className='subtitle is-6'>{beers.abv}%</h1>
-                <hr />
-                <br />
-                <h1 className='title is-5'>Brewery tips :</h1>
-                <br />
-                <h1 className='subtitle is-6'>{beers.brewers_tips}</h1>
-                <hr />
-                <br></br>
-                <div>
-                  <h1 className='title is-5'>Food paring:</h1>
-                  <braces />
-                  {food.map(item => {
-                    return (
-                      <li className='subtitle is-6' key={beers.id}>{item}</li>)
-                  })}
-                  <hr />
-                </div>
-                <br />
-                <div>
-                  <h1 className='title is-5'>Malt:</h1>
-                  {malt.map(item => {
-                    return (
-                      <a className='subtitle is-6' key={beers.id}>{item.name},</a>)
-                  })}
-                  <br />
-                  <br></br>
-                  <h1 h1 className='title is-5'>Hops:</h1>
-                  {hops.map(item => {
-                    return (
-                      <a className='subtitle is-6' key={beers.id}>{item.name},</a>)
-                  })}
-                  <hr />
-                  <h1 className='title is-5'>Yeast:</h1>
-                  <h1 className='subtitle is-6'>{yeast}</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-            :
-            <h2 className="title has-text-centered">
+{beers ? : <h2 className="title has-text-centered">
               {hasError ? 'Oh something went wrong, There are no beers to display 😞' : ' Beers are Loading...'}
             </h2>
           }
           
  ```         
 
-
+ The full example can be found ➡️ [Here](https://github.com/lukacspapp/SEI-Project-2-Brewdog/blob/main/Project-2-Brewery-master/project-2-start/src/componts/BeerInfo.js)
 
 ### Styling
 
