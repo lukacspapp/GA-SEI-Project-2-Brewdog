@@ -264,29 +264,28 @@ For styling we used a CSS framework [Bulma](https://bulma.io/). We used mainly t
 
 ## Wins
 
-Filter: Filter was a real challange that took us a great deal of time, loads of reaserch and team effort. We were very pleased that we were able to execute it in such a short period of time.
+Filter  :raised_hands: Filter was a real challange that took us a great deal of time, loads of reaserch and team effort. We were very pleased that we were able to execute it in such a short period of time.
 
-Teamwork :raised_hands: 
+Teamwork :raised_hands: This was the first time in my life I have ever pair-coded and it was a great experience. Me and Piotr worked out great together. When I was coding he was reaserching, throwing ideas and vice versa. It was really easy to work with him and we made a great team. We were able to figure out difficult tasks togeter such as the filteration of the beers.
 
 
 ## Challenges
 
-CORS :no_entry_sign: . While we were able to solve this easily after deployment, the why of it took me a while to fully understand. Our tutor was very helpful in explaining CORS in details.
-
-### Bugs
-
-Audio Volume: We set the audio volume as 0.6 as a starting point so its not too loud for the user. Due to this, it is not possible to change the volume of the track. We struggled to figure out if React Audio Player’s volume can be changed through state — so this will be a bug we need to solve in future.
+Filter :no_entry_sign: I think it was the biggest challange for both of us.
+Styling :no_entry_sign: I Really love [Bulma](https://bulma.io/) but it was a real challange to get use to the hundreds of divs I needed to use in order to execute a component
 
 
 ## Key Learnings
 
-* React.js: As this was my first React App, I learned a lot about conditional rendering, how state works and how to pass props using URLs.
+* React.js: As this was my first React App, I learned a lot about conditional rendering and how state works.
 
-* CSS Animations: Not only was this fun, but I feel very confident working with transitions and animations after this project.
+* Bulma: This was my first time using a CSS framework I really enjoyed it and I love Bulma's design.
+
+
 
 
 ## Future Improvements
 
-* Make it Responsive
-* Audio Fade in and out
-```
+* Try to pass props to different components that will allow me to call the API less frequently and also fewer components
+
+
