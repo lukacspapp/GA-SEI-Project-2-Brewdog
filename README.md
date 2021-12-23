@@ -179,13 +179,72 @@ On load the index page triggers the <code>getData</code> function that makes the
 
 The view of a single beer page is in the BeerInfo component and returns the image, name, description, ABV percentage, brewery tips, food pairing recommendations and the ingridients of the selected beer.
   
-There is a randomly generated beer option is available from the home page as well which is handled in this component. It is a great feature of this API that you can make a request to <code>https://api.punkapi.com/v2/beers/random</code> and it will give us a all the data from a randomly generated beer. We added some error handling as some of the beers does not have an image. We have set the image_url to a state and if that array return null an error image appear next to the beer information.
+There is a randomly generated beer option is available from the home page as well which is handled in this component. It is a great feature of this API that you can make a request to <code>https://api.punkapi.com/v2/beers/random</code> and it will give us a all the data from a randomly generated beer. We added some error handling as some of the beers does not have an image. We have set the image_url to a state and if that array return null an error image appear next to the beer information.  
   
   <img src='https://media0.giphy.com/media/OZeWzZalgU5XNyHAqh/giphy.gif?cid=ecf05e479dcrrg6cpofgx2ylaxnii83syhpkiz1qscsso0t3&rid=giphy.gif&ct=g'>
 
 ```
   <div className='column is-half'>{url !== null ? <img src={beers.image_url}></img> : <img src={error}></img> }</div>
 ```
+
+There is also some extra error handling in case the any of the api takes a bit more time to load or do not return anything back to the user
+
+```
+{beers ? <div>
+            <div className='title has-text-centered'> <h1>{beers.name}</h1></div><hr /><div className='columns'>
+              <div className='column is-half'>{url !== null ? <img src={beers.image_url}></img> : <img src={error}></img> }</div>
+              <div className='column is-half'>
+                <h1 className='title is-5'>Description:</h1>
+                <br />
+                <h1 className='subtitle is-6'>{beers.description}</h1>
+                <hr />
+                <br />
+                <h1 className='title is-5'>ABV:</h1>
+                <h1 className='subtitle is-6'>{beers.abv}%</h1>
+                <hr />
+                <br />
+                <h1 className='title is-5'>Brewery tips :</h1>
+                <br />
+                <h1 className='subtitle is-6'>{beers.brewers_tips}</h1>
+                <hr />
+                <br></br>
+                <div>
+                  <h1 className='title is-5'>Food paring:</h1>
+                  <braces />
+                  {food.map(item => {
+                    return (
+                      <li className='subtitle is-6' key={beers.id}>{item}</li>)
+                  })}
+                  <hr />
+                </div>
+                <br />
+                <div>
+                  <h1 className='title is-5'>Malt:</h1>
+                  {malt.map(item => {
+                    return (
+                      <a className='subtitle is-6' key={beers.id}>{item.name},</a>)
+                  })}
+                  <br />
+                  <br></br>
+                  <h1 h1 className='title is-5'>Hops:</h1>
+                  {hops.map(item => {
+                    return (
+                      <a className='subtitle is-6' key={beers.id}>{item.name},</a>)
+                  })}
+                  <hr />
+                  <h1 className='title is-5'>Yeast:</h1>
+                  <h1 className='subtitle is-6'>{yeast}</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+            :
+            <h2 className="title has-text-centered">
+              {hasError ? 'Oh something went wrong, There are no beers to display 😞' : ' Beers are Loading...'}
+            </h2>
+          }
+          
+ ```         
 
 
 
