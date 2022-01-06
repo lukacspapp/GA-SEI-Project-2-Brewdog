@@ -25,7 +25,7 @@ Piotr Jankowski - [<img src="https://i.stack.imgur.com/gVE0j.png" width='20px' a
 - Axios
 
 # BrewDog API
-A web application where users can browse and find out various information about their favorite BrewDog drink based on [Brewdog's Api](https://punkapi.com/documentation/v2)
+A web application where users can browse and find out various information about their favourite BrewDog drink based on [Brewdog's Api](https://punkapi.com/documentation/v2).
 
 ### Welcome Page
 
@@ -54,7 +54,7 @@ We were pretty set on the Brewdog's API as it was free to use and the informatio
 
 The API returns data from 25 different beers including the name, alcohol content, description, image, ingredients, brewing tips, food pairing information
 
-We displayed 9 different types of data from the nested API that we displayed on the app
+We displayed 9 different types of data from the nested API that we displayed on the app.
 
 
 
@@ -62,16 +62,42 @@ We displayed 9 different types of data from the nested API that we displayed on 
 
 We decided to have a simple three-page application: Welcome Page(/), Index Page(/beers), and a View of a Single Page (beers/id).
 
+We did live-share on VS code for pair coding. We started off as Piotr coding and me guiding and then on the second day we switched.
+
+The person who guided did the research and looked through study notes, whenever we hit a wall we both researched and tried solving the problem by trying out each and every code variation.
+
 
 ### Welcome Page:
 
   The Welcome Page is a really simple one as it can be seen here <img src='https://i.imgur.com/vGySNjK.png'>
-  It has two buttons, the 'Discover Brewdog!' that will take you to the index page(/beers), and the 'Generate a random Brewdog! 
-  that will take you to the view of a single beer page (beers/random).
+  It has two buttons, the 'Discover Brewdog!' that will take you to the index page(/beers), and the 'Generate a random Brewdog! that will take you to the view of a single beer page (beers/random).
   It also has a navbar, that has two buttons one is the logo that we got from [Giphy](https://giphy.com/gifs/BrewDogOfficial-brewdog-punk-ipa-iE3lwBCEBdzA6HQJRo)
   which is displayed all the time on all pages and it always redirects the user back to the home page.
   
   The other button is the 🍺Brewdog API🍺  which is conditionally rendered that will take you to the beer index page(/beers). While you are on the index page(/beers) the button moves to the right-hand side of the navbar and once you have selected an individual beer it will move back to the right-hand side.
+  
+  ```
+  import React from 'react'
+import { Link } from 'react-router-dom'
+import Navbar from './Navbar'
+const Home = () => {
+  return (
+    <><Navbar /><div className='imag'>
+      <section className='hero is-fullheight-with-navbar'>
+        <div className="hero-body">
+          <div className='container'>
+            <Link to='/beers'><button className='button is-link is-fullwidth is-rounded'>Discover Brewdog!</button></Link>
+            <div className='image2'></div>
+            <Link to='/beers/random'><button className='button is-danger is-fullwidth is-rounded'>Generate a random Brewdog!</button></Link>
+          </div>
+        </div>
+      </section>
+    </div></>
+
+  )
+}
+```
+
 
 
 ### Index Page:
@@ -173,4 +199,5 @@ Styling :no_entry_sign::   I Really love [Bulma](https://bulma.io/) but it was a
 ## Future Improvements
 
 * Try to pass props to different components that will allow me to call the API less frequently and also fewer components
+
 
