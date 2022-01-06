@@ -75,28 +75,6 @@ The person who guided did the research and looked through study notes, whenever 
   which is displayed all the time on all pages and it always redirects the user back to the home page.
   
   The other button is the 🍺Brewdog API🍺  which is conditionally rendered that will take you to the beer index page(/beers). While you are on the index page(/beers) the button moves to the right-hand side of the navbar and once you have selected an individual beer it will move back to the right-hand side.
-  
-  ```
-  import React from 'react'
-import { Link } from 'react-router-dom'
-import Navbar from './Navbar'
-const Home = () => {
-  return (
-    <><Navbar /><div className='imag'>
-      <section className='hero is-fullheight-with-navbar'>
-        <div className="hero-body">
-          <div className='container'>
-            <Link to='/beers'><button className='button is-link is-fullwidth is-rounded'>Discover Brewdog!</button></Link>
-            <div className='image2'></div>
-            <Link to='/beers/random'><button className='button is-danger is-fullwidth is-rounded'>Generate a random Brewdog!</button></Link>
-          </div>
-        </div>
-      </section>
-    </div></>
-
-  )
-}
-```
 
 
 
@@ -104,7 +82,7 @@ const Home = () => {
   
   <img src='https://i.imgur.com/vbF9gLB.png'>
   
-  The index page which is in the BeerDisply component and returns the image, name, tagline, and the first brewed time of the 25 beers. The page also has a filter that lets the user filter through the beers according to their ABV content. The filter is on the right-hand side of the navbar that is conditionally rendered. It is only visible when the user is on the Index page.
+  The index page which is in the BeerDisplay component and returns the image, name, tagline, and the first brewed time of the 25 beers. The page also has a filter that lets the user filter through the beers according to their ABV content. The filter is on the right-hand side of the navbar that is conditionally rendered. It is only visible when the user is on the Index page.
 
 On load the index page triggers the <code>getData</code> function that makes the request to the API with axios and sets the data to a <code>useState</code>
   ```
@@ -124,7 +102,7 @@ On load the index page triggers the <code>getData</code> function that makes the
   }, [])
   
   ```
-  As the function is in a <code>useEffect</code> the <code>getData</code> function gets called whenver there is change in the array of beers.
+  As the function is in a <code>useEffect</code> the <code>getData</code> function gets called whenever there is change in the array of beers.
   
   The is a filter on this page that is executed by the <code>newBeers</code> function on a click event.
   
@@ -148,7 +126,7 @@ On load the index page triggers the <code>getData</code> function that makes the
 
 The view of a single beer page is in the BeerInfo component and returns the image, name, description, ABV percentage, brewery tips, food pairing recommendations, and the ingredients of the selected beer.
   
-There is a randomly generated beer option is available from the home page as well which is handled in this component. It is a great feature of this API that you can make a request to <code>https://api.punkapi.com/v2/beers/random</code> and it will give us all the data from a randomly generated beer. We added some error handling as some of the beers do not have an image. We have set the image_url to a state and if that array return null an error image appears next to the beer information.  
+There is a randomly generated beer option available from the home page as well, which is handled in this component. It is a great feature of this API that you can make a request to <code>https://api.punkapi.com/v2/beers/random</code> and it will give us all the data from a randomly generated beer. We added some error handling as some of the beers do not have an image. We have set the image_url to a state and if that array returns null an error image appears next to the beer information.  
   
   <img src='https://media0.giphy.com/media/OZeWzZalgU5XNyHAqh/giphy.gif?cid=ecf05e479dcrrg6cpofgx2ylaxnii83syhpkiz1qscsso0t3&rid=giphy.gif&ct=g'>
 
@@ -156,7 +134,7 @@ There is a randomly generated beer option is available from the home page as wel
   <div className='column is-half'>{url !== null ? <img src={beers.image_url}></img> : <img src={error}></img> }</div>
 ```
 
-There is also some extra error handling in case any of the API takes a bit more time to load or do not return anything back to the user
+There is also some extra error handling in case any of the API takes a bit more time to load or do not return anything back to the user.
 
 ```
 {beers ? : <h2 className="title has-text-centered">
@@ -176,7 +154,7 @@ For styling, we used a CSS framework [Bulma](https://bulma.io/). We used mainly 
 
 Filter  :raised_hands::    Filter was a real challenge that took us a great deal of time, loads of research, and team effort. We were very pleased that we were able to execute it in such a short period of time.
 
-Teamwork :raised_hands::   This was the first time in my life I have ever pair-coded and it was a great experience. I and Piotr worked out great together. When I was coding he was researching, throwing ideas, and vice versa. It was really easy to work with him and we made a great team. We were able to figure out difficult tasks together such as the filtration of the beers.
+Teamwork :raised_hands::   This was the first time in my life I have ever pair-coded and it was a great experience. Myself and Piotr worked out great together. When I was coding he was researching, throwing ideas, and vice versa. It was really easy to work with him and we made a great team. We were able to figure out difficult tasks together such as the filtration of the beers.
 
 
 ## Challenges
@@ -184,20 +162,22 @@ Teamwork :raised_hands::   This was the first time in my life I have ever pair-c
 Filter :no_entry_sign::    I think it was the biggest challenge for both of us.
 
 
-Styling :no_entry_sign::   I Really love [Bulma](https://bulma.io/) but it was a real challenge to get used to the hundreds of divs I needed to use in order to execute a component
+Styling :no_entry_sign::   I really love [Bulma](https://bulma.io/) but it was a real challenge to get used to the hundreds of divs I needed to use in order to execute a component.
 
 
 ## Key Learnings
 
 * React.js: As this was my first React App, I learned a lot about conditional rendering and how the state works.
 
-* Bulma: This was my first time using a CSS framework I really enjoyed it and I love Bulma's design.
+* Bulma: This was my first time using a CSS framework. I really enjoyed it and I love Bulma's design.
 
 
 
 
 ## Future Improvements
 
-* Try to pass props to different components that will allow me to call the API less frequently and also fewer components
+* Try to pass props to different components that will allow me to call the API less frequently and also fewer components.
 
+## Bugs 🐞
 
+* We could not get the error handling to work properly within the timeframe. On the index page(/beers) if the user scrolls down to the bottom of the page it always shows ‘Beers are Loading …’ but when the API stops working it will display ‘Oh something went wrong, There are no beers to display😔'.
