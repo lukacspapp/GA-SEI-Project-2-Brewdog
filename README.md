@@ -52,7 +52,7 @@ We were pretty set on the Brewdog's API as it was free to use and the informatio
 
 <img src='https://i.imgur.com/GKzjGIK.png'>
 
-The API returns data from 25 different beers including the name, alcohol content, description, image, ingredients, brewing tips, food pairing information
+The API returns data from 25 different beers including the name, alcohol content, description, image, ingredients, brewing tips, and food pairing information
 
 We displayed 9 different types of data from the nested API that we displayed on the app.
 
@@ -74,7 +74,7 @@ The person who guided did the research and looked through study notes, whenever 
   It also has a navbar, that has two buttons one is the logo that we got from [Giphy](https://giphy.com/gifs/BrewDogOfficial-brewdog-punk-ipa-iE3lwBCEBdzA6HQJRo)
   which is displayed all the time on all pages and it always redirects the user back to the home page.
   
-  The other button is the 🍺Brewdog API🍺  which is conditionally rendered that will take you to the beer index page(/beers). While you are on the index page(/beers) the button moves to the right-hand side of the navbar and once you have selected an individual beer it will move back to the right-hand side.
+  The other button is the 🍺Brewdog API🍺 which is conditionally rendered that will take you to the beer index page(/beers). While you are on the index page(/beers) the button moves to the right-hand side of the navbar and once you have selected an individual beer it will move back to the right-hand side.
 
 
 
@@ -134,7 +134,7 @@ There is a randomly generated beer option available from the home page as well, 
   <div className='column is-half'>{url !== null ? <img src={beers.image_url}></img> : <img src={error}></img> }</div>
 ```
 
-There is also some extra error handling in case any of the API takes a bit more time to load or do not return anything back to the user.
+There is also some extra error handling in case any of the API takes a bit more time to load or does not return anything back to the user.
 
 ```
 {beers ? : <h2 className="title has-text-centered">
@@ -180,4 +180,4 @@ Styling :no_entry_sign::   I really love [Bulma](https://bulma.io/) but it was a
 
 ## Bugs 🐞
 
-* We could not get the error handling to work properly within the timeframe. On the index page(/beers) if the user scrolls down to the bottom of the page it always shows ‘Beers are Loading …’ but when the API stops working it will display ‘Oh something went wrong, There are no beers to display😔'.
+* We could not get the error handling to work properly within the timeframe. On the index page(/beers) if the user scrolls down to the bottom of the page it always shows ‘Beers are Loading …’ ​​but when the API stops working it will display ‘Oh something went wrong, There are no beers to display’.
