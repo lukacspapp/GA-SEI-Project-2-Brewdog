@@ -19,8 +19,8 @@ const BeerInfo = () => {
     const getData = async () => {
       try {
         const { data } = await axios.get(`https://api.punkapi.com/v2/beers/${id}`)
+        setFood(data)
         setBeers(data[0])
-        setFood(data[0].food_pairing)
         setyeast(data[0].ingredients.yeast)
         setMalt(data[0].ingredients.malt)
         setHops(data[0].ingredients.hops)
@@ -61,7 +61,7 @@ const BeerInfo = () => {
                   <braces />
                   {food.map(item => {
                     return (
-                      <li className='subtitle is-6' key={beers.id}>{item}</li>)
+                      <li className='subtitle is-6' key={beers.id}>{item.food_pairing}</li>)
                   })}
                   <hr />
                 </div>
